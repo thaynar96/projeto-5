@@ -8,6 +8,11 @@ tempo = Tempo()
 play = True
 while play == True:
     print (f'''
+    Esse jogo aborda a realidade brasileira da sobrecarga de trabalho da mulher. 
+    Reflita sobre cada escolha, para tomar uma decisão.  
+    Use como norteador de objetivos da personagem a pirâmide de Maslow. 
+''') #intro
+    print (f'''
     
         {humano.nome} tem {humano.idade}, é casada com Amando 
         de 45 anos.João é o primeiro filho do casal
