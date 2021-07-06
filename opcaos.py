@@ -165,7 +165,7 @@ def opcao8():
             print(f'Apesar do problema de alcoolismo do Marido, {humano.nome} acredita que Amando vai superar essa fase. Ela priorizou o cuidado de todos os integrantes da família.')
         elif aleatorio == 2:
             print(f'{humano.nome} está pensando em se divorciar, mas apesar dos problemas que ela tem com o marido, João é muito apegado com o pai, ela teme que o João fique muito triste com a separação dos pais. {humano.nome} vai dormir com uma forte dor de cabeça. ')
-  def conclusao():
+def conclusao():
     if humano.saude >=90:
         print(f'Parabéns,a {humano.nome} conseguiu alcançar seus obejtivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das responsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
     else:
