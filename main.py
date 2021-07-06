@@ -29,6 +29,5 @@ while play == True:
     opcao7()
     opcao8()
     break
-    # print(
-    #         '[ 1 ] Trabalhar\n[ 2 ] Tomar Banho\n[ 3 ] Comer\n[ 4 ] Cuidar do filho\n[ 5 ] Trabalhar \n[ 6 ] Dormir')
+ 
 
