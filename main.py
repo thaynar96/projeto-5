@@ -15,22 +15,8 @@ while True:
             sleep(0.044)
 
     print_slow(
-        f'''{humano.nome} tem {humano.idade}, é casada com Amando de 45 anos.\nJoão é o primeiro filho do casal que tem 6 anos de idade.\n{humano.nome} trabalha em período integral 8:00 – 18:00 em uma escola que fica \nlocalizada a 2 horas da sua casa. Ela está no penúltimo semestre da faculdade.\nO casal não possui casa própria, moram de aluguel. Amando está desempregado.\nAjude {humano.nome} a conseguir seus objetivos:''')
-    # print_slow(f'''''')
-    # print (f'''
-    
-    #     {humano.nome} tem {humano.idade}, é casada com Amando 
-    #     de 45 anos.João é o primeiro filho do casal
-    #     que tem 6 anos de idade.{humano.nome} trabalha em período
-    #     integral 8:00 – 18:00 em uma escola que fica localizada 
-    #     a 2 horas da sua casa. Ela está no penúltimo semestre da 
-    #     faculdade. O casal não possui casa própria, moram de 
-    #     aluguel. Amando está desempregado. 
-    
-    #     Ajude a {humano.nome} conseguir seus objetivos:
-    #     ''')
-    
-    opcao1()
+        f'''{humano.nome} tem {humano.idade}, é casada com Amando de 45 anos.\nJoão é o primeiro filho do casal que tem 6 anos de idade.\n{humano.nome} trabalha em período integral 8:00 – 18:00 em uma escola que fica \nlocalizada a 2 horas da sua casa. Ela está no penúltimo semestre da faculdade.\nO casal não possui casa própria, moram de aluguel. Amando está desempregado.\nAjude {humano.nome} a conseguir seus objetivos:\n''')
+    print_slow(opcao1())
     opcao2()
     opcao3()
     opcao4()

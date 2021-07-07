@@ -5,7 +5,8 @@ class Tempo:
 
     def __str__(self):
         return f'''
-        Horário: {self.hora} 
+                        Dia 10/07/2020
+                        Horário:{self.hora}
         '''
 
     def passarTempo(self,minutos,hora=5):
