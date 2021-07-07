@@ -32,7 +32,7 @@ while play == True:
     opcao5()
     opcao6()
     opcao7()
-    opcao8()
+    opcao8()#alo ambev
     break
  
 
