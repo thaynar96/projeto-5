@@ -1,6 +1,8 @@
 from random import randint
 from pessoa import Pessoa,humano
+from tempo import Tempo
 def opcao1():
+    print(Tempo())
     print(f'{humano.nome} acorda cansada, não dormiu direito pois estava preocupada como iria honrar com as contas. João está chorando, com a fralda suja e {humano.nome} está atrasada para ir ao trabalho.')
     print(f'''
     A){humano.nome} vai cuidar do filho, toma um banho rápido ou prepara sua merenda e em seguida vai para o trabalho.
@@ -22,6 +24,7 @@ def opcao1():
             print(f'Amando volta a dormir e não faz o que {humano.nome} pediu. ')
 
 def opcao2():
+    print(Tempo())
     print(f'{humano.nome} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
     print(f'''
     A){humano.nome} ignora os dois homens é abre o portão da garage que NÃO é automático.
@@ -42,6 +45,7 @@ def opcao2():
             print(f'{humano.nome} briga com amando, diz que ele é muito medroso, mas espera que os dois homens vão embora, aciona a polícia. ')
 
 def opcao3():
+    print(Tempo())
     print(f'{humano.nome} está no início do  percurso em direção ao seu trabalho, dentro do limite de velocidade permitido pela via, ela tem duas rotas para escolha: ')
     print(f'''
     A)Ela escolhe o caminho mais rápido:
@@ -63,6 +67,7 @@ def opcao3():
 
 
 def opcao4():
+    print(Tempo())
     print(f'O chefe de {humano.nome} pede que ela seja realocada de função durante 7 dias, para uma função de gestão de planejamentos de dados da escola. Caso humano aceite essa pequena mudança ela vai ter que levar trabalho para casa é fazer pela madrugada adentro, já que não dispõem de outro horário. ')
     print(f'''
     A){humano.nome} vê esse desafio como uma oportunidade de evolução pessoal e profissional mesmo que ela abdique de algumas horas do seu sono.
@@ -86,6 +91,7 @@ def opcao4():
 # def opcao2():
 #     print('')
 def opcao5():
+    print(Tempo())
     print(f'{humano.nome} está no seu horário de almoço e dispõe de 30 min para o almoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi buscar a criança.')
     print(f'''
     A){humano.nome} não almoça e vai pegar João na escola e traz ele para o seu local de trabalho.
@@ -106,6 +112,7 @@ def opcao5():
             print(f'Descobre que Amando não foi pegar o filho por que estava em um bar. ')
 
 def opcao6():
+    print(Tempo())
     print(f'Durante o trajeto para a faculdade, o gps informa de um grande engarrafamento mais afrente. {humano.nome} tem um trabalho para apresentar em grupo:')
     print(f'''
     A)Pega um desvio mais longo que não tem engarrafamento.
@@ -127,6 +134,7 @@ def opcao6():
 
 
 def opcao7():
+    print(Tempo())
     print(f'Ao ir em direção a vaga de estacionamento, {humano.nome} aguarda o carro sair da vaga para poder estacionar, quando de repente um motorista entra de uma vez e pega a vaga. ')
     print(f'''
     A)Procura por outra vaga
@@ -147,6 +155,7 @@ def opcao7():
             print(f'O motorista não tira o carro da vaga, humano xinga o motorista é chega atrasada na sala de aula.  ')
 
 def opcao8():
+    print(Tempo())
     print(f'Ao chegar em casa, {humano.nome} descobre que Amando estava bêbado e não cuidou do filho. João estava sujo, com fome e chorando. ')
     print(f'''
     A){humano.nome} vai cuidar de João, toma banho, vai jantar e vai dormir.
@@ -165,3 +174,5 @@ def opcao8():
             print(f'Apesar do problema de alcoolismo do Marido, {humano.nome} acredita que Amando vai superar essa fase. Ela priorizou o cuidado de todos os integrantes da família.')
         elif aleatorio == 2:
             print(f'{humano.nome} está pensando em se divorciar, mas apesar dos problemas que ela tem com o marido, João é muito apegado com o pai, ela teme que o João fique muito triste com a separação dos pais. {humano.nome} vai dormir com uma forte dor de cabeça. ')
+
+    
