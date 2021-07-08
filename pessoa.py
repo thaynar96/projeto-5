@@ -34,9 +34,8 @@ class Pessoa:
     def retirarSaude(self):
         pass
 
-
     def __str__(self):
-            return f'''\nPONTUAÇÃO:
+        return f'''\nPONTUAÇÃO:
             Família: {self.__familya}
             Relacionamento do Casal: {self.__relacionamento_casal}
             Bem Estar: {self.__bemEstar}
@@ -47,10 +46,13 @@ class Pessoa:
 
     def update_scores(self, fam, rel_casal, bem_est, trab, estd, segur, saude):
         param = [fam, rel_casal, bem_est, trab, estd, segur, saude]
-        atrib = [self.__familya, self.__relacionamento_casal, self.__bemEstar, self.__trabalho, self.__estudo, self.__seguranca, self.__saude]
+        atrib = [self.__familya, self.__relacionamento_casal, self.__bemEstar,
+                 self.__trabalho, self.__estudo, self.__seguranca, self.__saude]
         for i in range(0, 7):
             if atrib[i] + param[i] >= 100:
                 atrib[i] = 100
+            elif atrib[i] + atrib[i] <= 0:
+                atrib[i] = 0
             else:
                 atrib[i] += param[i]
 

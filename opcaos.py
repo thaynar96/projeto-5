@@ -33,7 +33,9 @@ def opcao1():
             saude = 10
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
-            print(humano.__str__())
+            #print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam} pontos\nTrabalho: {trab} pontos\n Saúde: {saude} pontos'
 
   
         elif aleatorio == 2:
@@ -48,7 +50,9 @@ def opcao1():
             saude = 20
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
-            print(humano.__str__())
+            #print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamilia: {fam} pontos\nRelacionamento do Casal: {rel_casal} pontos\nTrabalho: {trab} pontos\n Saúde: {saude} pontos'
 
     elif escolha == 'B':
         if aleatorio == 1:
@@ -64,7 +68,9 @@ def opcao1():
             saude = 10
 
             humano.update_scores(fam, rel_casal, bem_est,trab, estd, segur, saude)
-            print(humano.__str__())
+            #print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamilia: {fam} pontos\nRelacionamento do Casal: {rel_casal} pontos\nTrabalho: {trab} pontos\n Saúde: {saude}  pontos'
 
         elif aleatorio == 2:
             print(
@@ -79,8 +85,9 @@ def opcao1():
             saude = -10
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
-            print(humano.__str__())
-    sleep(4)
+            #print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamilia: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nTrabalho: {trab}/100\n Saúde: {saude}/100'
 
 def opcao2():
     clean_screen()
@@ -109,7 +116,8 @@ def opcao2():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
-            
+            return f'\nPontos adquirido por {humano.nome}:\nTrabalho: {trab}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(
                 f'\nOs dois sujeitos estavam hospedados na casa de frente, não ofereceram perigo, os dois homens esqueceram a chave dentro de casa e o celular. {humano.nome} ligou para um chaveiro 24h para ajudar os dois rapazes e em seguida foi para o trabalho. ')
@@ -124,6 +132,8 @@ def opcao2():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nTrabalho: {trab}/100'
 
     elif escolha == 'B':
         if aleatorio == 1:
@@ -140,6 +150,8 @@ def opcao2():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(f'\n{humano.nome} briga com amando, diz que ele é muito medroso, mas espera que os dois homens vão embora, aciona a polícia. ')
 
@@ -153,7 +165,10 @@ def opcao2():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
+
+    #sleep(4)
 
 def opcao3():
     clean_screen()
@@ -180,6 +195,8 @@ def opcao3():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
            
         elif aleatorio == 2:
             print(
@@ -196,6 +213,8 @@ def opcao3():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
+
     elif escolha == 'B':
         if aleatorio == 1:
             print(f'\nO trânsito esta normal, ela chega no trabalho cedo.')
@@ -211,6 +230,8 @@ def opcao3():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(
                 f'\n{humano.nome} pega um engarrafamento devido um acidente e chega atrasada no trabalho.')
@@ -225,7 +246,10 @@ def opcao3():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSaúde: {saude}/100'
+
+    #sleep(4)
 
 def opcao4():
     clean_screen()
@@ -253,6 +277,7 @@ def opcao4():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
            
         elif aleatorio == 2:
             print(f'\n{humano.nome} fica muito estressada e sobrecarregada com a quantidade de trabalho e o tempo disponível que tem. Acaba não dando atenção ao João e desconta seu estresse em Amando.')
@@ -267,6 +292,8 @@ def opcao4():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\n Saúde: {saude}/100'
 
     elif escolha == 'B':
         if aleatorio == 1:
@@ -283,6 +310,9 @@ def opcao4():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(
                 f'\n{humano.nome} perdeu a oportunidade de ter um aumento. Ficou mais tempo com o seu filho.  ')
@@ -297,7 +327,10 @@ def opcao4():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\n Saúde: {saude}/100'
+
+    #sleep(4)
 
 
 def opcao5():
@@ -327,6 +360,8 @@ def opcao5():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100'
+
           
         elif aleatorio == 2:
             print(
@@ -343,6 +378,8 @@ def opcao5():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\n Saúde: {saude}/100'
+
     elif escolha == 'B':
         if aleatorio == 1:
             print(f'\nDescobre que Armando se atrasou por que ele voltou para casa para fechar a panela de pressão que esqueceu ligada.  Amando estava preparando o prato favorito do filho.')
@@ -358,6 +395,8 @@ def opcao5():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(f'\nDescobre que Amando não foi pegar o filho por que estava em um bar. ')
 
@@ -371,7 +410,10 @@ def opcao5():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nSaúde: {saude}/100'
+
+    #sleep(4)
 
 def opcao6():
     clean_screen()
@@ -400,6 +442,8 @@ def opcao6():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
             
         elif aleatorio == 2:
             print(
@@ -416,6 +460,8 @@ def opcao6():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
     elif escolha == 'B':
         if aleatorio == 1:
             print(f'\n{humano.nome} não seguiu o conselho de desvio do gps e chegou na faculdade adiantada, aproveitou para lanchar e ligar para o filho.')
@@ -431,6 +477,8 @@ def opcao6():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(f'\n{humano.nome} ficou presa no engarrafamento, ficou estressada, chegou atrasada na faculdade, e levou uma advertência do professor. ')
 
@@ -444,7 +492,10 @@ def opcao6():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
+    #sleep(4)
 
 def opcao7():
     clean_screen()
@@ -473,6 +524,8 @@ def opcao7():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
            
         elif aleatorio == 2:
             print(f'\nChega atrasada na classe de aula')
@@ -487,6 +540,8 @@ def opcao7():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
     elif escolha == 'B':
         if aleatorio == 1:
@@ -504,6 +559,8 @@ def opcao7():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(f'\nO motorista não tira o carro da vaga, humano xinga o motorista é chega atrasada na sala de aula.  ')
 
@@ -517,7 +574,10 @@ def opcao7():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
+    #sleep(4)
 
 def opcao8():
     clean_screen()
@@ -547,6 +607,8 @@ def opcao8():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100'
+
          
         elif aleatorio == 2:
             print(f'\n{humano.nome} cuida do filho e depois cai na cama de tanto cansaço. O sono foi mais forte que a fome e banho.')
@@ -561,6 +623,8 @@ def opcao8():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
+
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nSaúde: {saude}/100'
 
     elif escolha == 'B':
         if aleatorio == 1:
@@ -578,6 +642,8 @@ def opcao8():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
+            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
         elif aleatorio == 2:
             print(f'\n{humano.nome} está pensando em se divorciar, mas apesar dos problemas que ela tem com o marido, João é muito apegado com o pai, ela teme que o João fique muito triste com a separação dos pais. {humano.nome} vai dormir com uma forte dor de cabeça. ')
 
@@ -591,7 +657,10 @@ def opcao8():
 
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
-    sleep(4)
+
+            return f'\nPontos adquirido por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+
+    #sleep(4)
 
 def conclusao():
     clean_screen()
