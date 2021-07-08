@@ -23,6 +23,10 @@ class Pessoa:
     @property
     def idade(self):
         return self.__idade
+    
+    @property
+    def saude(self):
+        return self.__saude
 
     @nome.setter
     def nome(self, nome):
@@ -47,7 +51,7 @@ class Pessoa:
     def update_scores(self, fam, rel_casal, bem_est, trab, estd, segur, saude):
         param = [fam, rel_casal, bem_est, trab, estd, segur, saude]
         atrib = [self.__familya, self.__relacionamento_casal, self.__bemEstar,
-                 self.__trabalho, self.__estudo, self.__seguranca, self.__saude]
+                self.__trabalho, self.__estudo, self.__seguranca, self.__saude]
         for i in range(0, 7):
             if atrib[i] + param[i] >= 100:
                 atrib[i] = 100

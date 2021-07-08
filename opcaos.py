@@ -37,7 +37,6 @@ def opcao1():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam} pontos\nTrabalho: {trab} pontos\n Saúde: {saude} pontos'
 
-  
         elif aleatorio == 2:
             print(f'\n{humano.nome} cuida do filho e toma banho, não chega atrasada no trabalho.Mas está com fome por que não merendou')
 
@@ -197,7 +196,7 @@ def opcao3():
             print(humano.__str__())
 
             return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
-           
+
         elif aleatorio == 2:
             print(
                 f'\nNo caminho mais rápido uma pessoa entra na frente do carro. Ao jogar o carro para a calçada {humano.nome} bateu no meio fio e furou o pneu se atrasou. ')
@@ -278,7 +277,7 @@ def opcao4():
             print(humano.__str__())
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
-           
+
         elif aleatorio == 2:
             print(f'\n{humano.nome} fica muito estressada e sobrecarregada com a quantidade de trabalho e o tempo disponível que tem. Acaba não dando atenção ao João e desconta seu estresse em Amando.')
 
@@ -362,7 +361,6 @@ def opcao5():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100'
 
-          
         elif aleatorio == 2:
             print(
                 f'\n{humano.nome} falou mal do pai na frente do João quando voltava da escola para o seu trabalho. ')
@@ -526,7 +524,6 @@ def opcao7():
 
             return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
-           
         elif aleatorio == 2:
             print(f'\nChega atrasada na classe de aula')
 
@@ -541,7 +538,7 @@ def opcao7():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
-            return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+            return f'\nPontos adquiridos por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
     elif escolha == 'B':
         if aleatorio == 1:
@@ -609,7 +606,7 @@ def opcao8():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100'
 
-         
+
         elif aleatorio == 2:
             print(f'\n{humano.nome} cuida do filho e depois cai na cama de tanto cansaço. O sono foi mais forte que a fome e banho.')
 
@@ -642,7 +639,7 @@ def opcao8():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
-            return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+            return f'\nPontos adquiridos por {humano.nome}:\nFamília: {fam}\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
         elif aleatorio == 2:
             print(f'\n{humano.nome} está pensando em se divorciar, mas apesar dos problemas que ela tem com o marido, João é muito apegado com o pai, ela teme que o João fique muito triste com a separação dos pais. {humano.nome} vai dormir com uma forte dor de cabeça. ')
@@ -658,7 +655,7 @@ def opcao8():
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             print(humano.__str__())
 
-            return f'\nPontos adquirido por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
+            return f'\nPontos adquiridos por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
     #sleep(4)
 
