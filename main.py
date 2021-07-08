@@ -18,7 +18,7 @@ while True:
         # abaixo temos algumas funções que foram importadas de um módulo e possuem
         # condições para adicionar ou não certos atributos.
             
-    print(opcao1())
+    print(opcao1())# oi mundo
     sleep(4)
     print(opcao2())
     sleep(4)
