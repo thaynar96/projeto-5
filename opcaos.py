@@ -23,10 +23,16 @@ def clean_screen():
 def opcao1():
     clean_screen()
     print_slow(f'{humano.nome} acorda cansada, não dormiu direito pois estava preocupada como iria honrar com as contas. João está chorando, com a fralda suja e {humano.nome} está atrasada para ir ao trabalho.')
-    print(f'''
-    A){humano.nome} vai cuidar do filho, toma um banho rápido ou prepara sua merenda e em seguida vai para o trabalho.
-    B)Acorda Amando e pede que ele vá cuidar do filho e prepare a merenda do casal enquanto {humano.nome} vai tomar banho.        
-    ''')
+    print(
+    f'''
+
+
+            A){humano.nome} vai cuidar do filho, toma um banho rápido
+            ou prepara sua merenda e em seguida vai para o trabalho.
+
+            B)Acorda Amando e pede que ele vá cuidar do filho e preparar
+            a merenda do casal enquanto {humano.nome} vai tomar banho.        
+    '''   )
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     resp = validacao(escolha)
@@ -104,8 +110,13 @@ def opcao2():
     clean_screen()
     print_slow(f'{humano.nome} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
     print(f'''
-    A){humano.nome} ignora os dois homens é abre o portão da garage que NÃO é automático.
-    B){humano.nome} chama Amando, que a orienta a chamar a policia e aguardar até que os dois homens saião da frente da garagem..         
+
+
+            A){humano.nome} ignora os dois homens é abre o portão
+            da garagem que não é automático.
+
+            B){humano.nome} chama Amando, que a orienta a chamar a policia
+            e aguardar até que os dois homens saião da frente da garagem..         
     ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
@@ -186,8 +197,11 @@ def opcao3():
     clean_screen()
     print_slow(f'{humano.nome} está no início do  percurso em direção ao seu trabalho, dentro do limite de velocidade permitido pela via, ela tem duas rotas para escolha: ')
     print(f'''
-    A)Ela escolhe o caminho mais rápido:
-    B){humano.nome} pega a rota normal:       
+
+
+            A){humano.nome} escolhe o caminho mais rápido.
+
+            B){humano.nome} pega a rota normal.      
     ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
@@ -268,8 +282,15 @@ def opcao4():
     clean_screen()
     print_slow(f'O chefe de {humano.nome} pede que ela seja realocada de função durante 7 dias, para uma função de gestão de planejamentos de dados da escola. Caso humano aceite essa pequena mudança ela vai ter que levar trabalho para casa é fazer pela madrugada adentro, já que não dispõem de outro horário. ')
     print(f'''
-    A){humano.nome} vê esse desafio como uma oportunidade de evolução pessoal e profissional mesmo que ela abdique de algumas horas do seu sono.
-    B){humano.nome} recusa educadamente o pedido do chefe já que não tem tempo disponível. Mas fica triste em dar a recusa, pois o seu superior é muito compreensível com ela, até autorizou a sua saída uma hora mais cedo, para que ela chegue atempo na faculdade.        
+
+
+            A){humano.nome} vê esse desafio como uma oportunidade de evolução
+            pessoal e profissional mesmo que ela abdique de algumas horas do seu sono.
+
+            B){humano.nome} recusa educadamente o pedido do chefe já que não tem tempo
+            disponível. Mas fica triste em dar a recusa, pois o seu superior é muito
+            compreensível com ela, até autorizou a sua saída uma hora mais cedo, 
+            para que ela chegue atempo na faculdade.        
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
@@ -351,9 +372,13 @@ def opcao5():
     clean_screen()
     print_slow(f'{humano.nome} está no seu horário de almoço e dispõe de 30 min para o almoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi buscar a criança.')
     print(f'''
-    A){humano.nome} não almoça e vai pegar João na escola e traz ele para o seu local de trabalho.
-    B)Tenta ligar para o Armando e saber o que houve.        
-    ''')
+
+
+            A){humano.nome} não almoça e vai pegar João na escola e traz ele 
+            para o seu local de trabalho.
+
+            B)Tenta ligar para o Armando e saber o que houve.        
+            ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     resp = validacao(escolha)
