@@ -5,6 +5,11 @@ import os
 import sys
 
 
+def validacao(a):
+    while a not in 'AB':
+        a = input('Digite uma opção do menu [A / B]:  ')[0].upper()
+    return a
+
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
@@ -24,9 +29,10 @@ def opcao1():
     ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(
                 f'\n{humano.nome} chega atrasada no seu trabalho e é advertida pelo seu superior.')
@@ -60,7 +66,7 @@ def opcao1():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamilia: {fam} pontos\nRelacionamento do Casal: {rel_casal} pontos\nTrabalho: {trab} pontos\n Saúde: {saude} pontos'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(
                 f'\nAmando cuida do filho e faz a merenda do casal. {humano.nome} chega atempo no trabalho. ')
@@ -89,12 +95,11 @@ def opcao1():
             estd = 0
             segur = 0
             saude = -10
-
+    
             humano.update_scores(fam, rel_casal, bem_est, trab, estd, segur, saude)
             #print(humano.__str__())
-
+    
             return f'\nPontos adquirido por {humano.nome}:\nFamilia: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nTrabalho: {trab}/100\n Saúde: {saude}/100'
-
 def opcao2():
     clean_screen()
     print_slow(f'{humano.nome} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
@@ -104,9 +109,10 @@ def opcao2():
     ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(
                 f'\n{humano.nome} foi muito imprudente, colocou sua vida em risco é da sua família .')
@@ -141,7 +147,7 @@ def opcao2():
 
             return f'\nPontos adquirido por {humano.nome}:\nRelacionamento do Casal: {rel_casal}/100\nTrabalho: {trab}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(f'\n{humano.nome} segue o conselho do Amando, chama a policia e espera até que os dois homens saiam da frente da garagem.')
 
@@ -185,9 +191,10 @@ def opcao3():
     ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(f'\na.	No caminho mais rápido uma pessoa entra na frente do carro, mas ela não foi atropelada, não teve danos materiais, só o susto.')
 
@@ -221,7 +228,7 @@ def opcao3():
 
             return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(f'\nO trânsito esta normal, ela chega no trabalho cedo.')
 
@@ -266,9 +273,10 @@ def opcao4():
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(f'\nDevido ao esforço de {humano.nome} ela é promovida a um cargo temporário de confiança que lhe permite ganhar mais, ela fica mais contente por dar mais conforto para sua família através do aumento que vai ter.')
 
@@ -301,7 +309,7 @@ def opcao4():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\n Saúde: {saude}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(f'\nSeu chefe ficou chateado, já que ele sempre procura ajudar humano de todas as formas possíveis.')
 
@@ -348,9 +356,10 @@ def opcao5():
     ''')
     
     escolha = input('Digite uma opção do menu [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(
                 f'\n{humano.nome} brincou bastante de adivinhação com João no trajeto da escola para o seu trabalho. ')
@@ -385,7 +394,7 @@ def opcao5():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\n Saúde: {saude}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(f'\nDescobre que Armando se atrasou por que ele voltou para casa para fechar a panela de pressão que esqueceu ligada.  Amando estava preparando o prato favorito do filho.')
 
@@ -430,9 +439,10 @@ def opcao6():
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(
                 f'\nO desvio que {humano.nome} fez apesar de ser mais longo não houve engarrafamento durante o trajeto, {humano.nome} chegou na faculdade no horário correto.')
@@ -467,7 +477,7 @@ def opcao6():
 
             return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(f'\n{humano.nome} não seguiu o conselho de desvio do gps e chegou na faculdade adiantada, aproveitou para lanchar e ligar para o filho.')
 
@@ -512,9 +522,10 @@ def opcao7():
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(f'\nEncontra uma vaga e consegue chegar atempo na faculdade ')
 
@@ -547,7 +558,7 @@ def opcao7():
 
             return f'\nPontos adquiridos por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(
                 f'\nO motorista que furou a frente da {humano.nome} pede desculpas e tira o carro da vaga. {humano.nome} chega no horário na sala de aula.')
@@ -593,9 +604,10 @@ def opcao8():
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
+    resp = validacao(escolha)
     aleatorio = randint(1, 2)
     
-    if escolha == 'A':
+    if resp == 'A':
         if aleatorio == 1:
             print(
                 f'\nMesmo estando exausta de uma longa jornada de trabalho, {humano.nome} cuida do filho, prepara a sua janta, toma banho e vai dormir.')
@@ -630,7 +642,7 @@ def opcao8():
 
             return f'\nPontos adquirido por {humano.nome}:\nFamília: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nSaúde: {saude}/100'
 
-    elif escolha == 'B':
+    elif resp == 'B':
         if aleatorio == 1:
             print(
                 f'\nApesar do problema de alcoolismo do Marido, {humano.nome} acredita que Amando vai superar essa fase. Ela priorizou o cuidado de todos os integrantes da família.')
