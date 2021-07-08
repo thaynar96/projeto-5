@@ -27,10 +27,30 @@ class Pessoa:
     @property
     def saude(self):
         return self.__saude
+    
+     @property
+    def familya(self):
+        return self.__familya
 
-    @nome.setter
-    def nome(self, nome):
-        self.__nome = nome
+    @property
+    def relacionamento_casal(self):
+        return self.__relacionamento_casal
+
+    @property
+    def bemEstar(self):
+        return self.__bemEstar
+
+    @property
+    def trabalho(self):
+        return self.__trabalho
+
+    @property
+    def estudo(self):
+        return self.__estudo
+
+    @property
+    def seguranca(self):
+        return self.__seguranca
 
     def acrescentarSaude(self):
         pass
