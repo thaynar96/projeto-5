@@ -28,7 +28,7 @@ class Pessoa:
     def saude(self):
         return self.__saude
     
-     @property
+    @property
     def familya(self):
         return self.__familya
 
