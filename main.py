@@ -3,17 +3,9 @@ from tempo import Tempo
 from time import sleep
 from opcaos import *
 
-import sys
 
 # alteração do comentário
 tempo = Tempo()
-
-
-def print_slow(str):
-    for letter in str:
-        sys.stdout.write(letter)
-        sys.stdout.flush()
-        sleep(0.044)
 
 
 while True:

@@ -2,7 +2,14 @@ from random import randint
 from pessoa import Pessoa, humano
 from time import sleep
 import os
+import sys
 
+
+def print_slow(str):
+    for letter in str:
+        sys.stdout.write(letter)
+        sys.stdout.flush()
+        sleep(0.044)
 
 def clean_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
@@ -10,7 +17,7 @@ def clean_screen():
 
 def opcao1():
     clean_screen()
-    print(f'{humano.nome} acorda cansada, não dormiu direito pois estava preocupada como iria honrar com as contas. João está chorando, com a fralda suja e {humano.nome} está atrasada para ir ao trabalho.')
+    print_slow(f'{humano.nome} acorda cansada, não dormiu direito pois estava preocupada como iria honrar com as contas. João está chorando, com a fralda suja e {humano.nome} está atrasada para ir ao trabalho.')
     print(f'''
     A){humano.nome} vai cuidar do filho, toma um banho rápido ou prepara sua merenda e em seguida vai para o trabalho.
     B)Acorda Amando e pede que ele vá cuidar do filho e prepare a merenda do casal enquanto {humano.nome} vai tomar banho.        
@@ -90,7 +97,7 @@ def opcao1():
 
 def opcao2():
     clean_screen()
-    print(f'{humano.nome} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
+    print_slow(f'{humano.nome} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
     print(f'''
     A){humano.nome} ignora os dois homens é abre o portão da garage que NÃO é automático.
     B){humano.nome} chama Amando, que a orienta a chamar a policia e aguardar até que os dois homens saião da frente da garagem..         
@@ -171,7 +178,7 @@ def opcao2():
 
 def opcao3():
     clean_screen()
-    print(f'{humano.nome} está no início do  percurso em direção ao seu trabalho, dentro do limite de velocidade permitido pela via, ela tem duas rotas para escolha: ')
+    print_slow(f'{humano.nome} está no início do  percurso em direção ao seu trabalho, dentro do limite de velocidade permitido pela via, ela tem duas rotas para escolha: ')
     print(f'''
     A)Ela escolhe o caminho mais rápido:
     B){humano.nome} pega a rota normal:       
@@ -252,7 +259,7 @@ def opcao3():
 
 def opcao4():
     clean_screen()
-    print(f'O chefe de {humano.nome} pede que ela seja realocada de função durante 7 dias, para uma função de gestão de planejamentos de dados da escola. Caso humano aceite essa pequena mudança ela vai ter que levar trabalho para casa é fazer pela madrugada adentro, já que não dispõem de outro horário. ')
+    print_slow(f'O chefe de {humano.nome} pede que ela seja realocada de função durante 7 dias, para uma função de gestão de planejamentos de dados da escola. Caso humano aceite essa pequena mudança ela vai ter que levar trabalho para casa é fazer pela madrugada adentro, já que não dispõem de outro horário. ')
     print(f'''
     A){humano.nome} vê esse desafio como uma oportunidade de evolução pessoal e profissional mesmo que ela abdique de algumas horas do seu sono.
     B){humano.nome} recusa educadamente o pedido do chefe já que não tem tempo disponível. Mas fica triste em dar a recusa, pois o seu superior é muito compreensível com ela, até autorizou a sua saída uma hora mais cedo, para que ela chegue atempo na faculdade.        
@@ -334,7 +341,7 @@ def opcao4():
 
 def opcao5():
     clean_screen()
-    print(f'{humano.nome} está no seu horário de almoço e dispõe de 30 min para o almoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi buscar a criança.')
+    print_slow(f'{humano.nome} está no seu horário de almoço e dispõe de 30 min para o almoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi buscar a criança.')
     print(f'''
     A){humano.nome} não almoça e vai pegar João na escola e traz ele para o seu local de trabalho.
     B)Tenta ligar para o Armando e saber o que houve.        
@@ -415,7 +422,7 @@ def opcao5():
 
 def opcao6():
     clean_screen()
-    print(
+    print_slow(
         f'Durante o trajeto para a faculdade, o gps informa de um grande engarrafamento mais afrente. {humano.nome} tem um trabalho para apresentar em grupo:')
     print(f'''
     A)Pega um desvio mais longo que não tem engarrafamento.
@@ -497,7 +504,7 @@ def opcao6():
 
 def opcao7():
     clean_screen()
-    print(
+    print_slow(
         f'Ao ir em direção a vaga de estacionamento, {humano.nome} aguarda o carro sair da vaga para poder estacionar, quando de repente um motorista entra de uma vez e pega a vaga. ')
     print(f'''
     A)Procura por outra vaga
@@ -578,7 +585,7 @@ def opcao7():
 
 def opcao8():
     clean_screen()
-    print(
+    print_slow(
         f'Ao chegar em casa, {humano.nome} descobre que Amando estava bêbado e não cuidou do filho. João estava sujo, com fome e chorando. ')
     print(f'''
     A){humano.nome} vai cuidar de João, toma banho, vai jantar e vai dormir.
