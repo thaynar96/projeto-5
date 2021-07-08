@@ -459,8 +459,11 @@ def opcao6():
     print_slow(
         f'Durante o trajeto para a faculdade, o gps informa de um grande engarrafamento mais afrente. {humano.nome} tem um trabalho para apresentar em grupo:')
     print(f'''
-    A)Pega um desvio mais longo que não tem engarrafamento.
-    B)Fica na mesma via, supondo que o engarrafamento já terminou.        
+
+
+            A)Pega um desvio mais longo que não tem engarrafamento.
+
+            B)Fica na mesma via, supondo que o engarrafamento já terminou.        
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
@@ -542,8 +545,12 @@ def opcao7():
     print_slow(
         f'Ao ir em direção a vaga de estacionamento, {humano.nome} aguarda o carro sair da vaga para poder estacionar, quando de repente um motorista entra de uma vez e pega a vaga. ')
     print(f'''
-    A)Procura por outra vaga
-    B)Tenta dialogar com o motorista para que ele dê a vaga para ela, já que ela estava esperando o motorista da vaga sair para ela poder entrar
+
+
+            A)Procura por outra vaga
+
+            B)Tenta dialogar com o motorista para que ele dê a vaga para ela,
+            já que ela estava esperando o motorista da vaga sair para ela poder entrar
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
@@ -602,7 +609,7 @@ def opcao7():
             return f'\nPontos adquirido por {humano.nome}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
         elif aleatorio == 2:
-            print(f'\nO motorista não tira o carro da vaga, humano xinga o motorista é chega atrasada na sala de aula.  ')
+            print(f'\nO motorista não tira o carro da vaga, {humano.nome} xinga o motorista é chega atrasada na sala de aula.  ')
 
             fam = 0
             rel_casal = 0
@@ -624,8 +631,12 @@ def opcao8():
     print_slow(
         f'Ao chegar em casa, {humano.nome} descobre que Amando estava bêbado e não cuidou do filho. João estava sujo, com fome e chorando. ')
     print(f'''
-    A){humano.nome} vai cuidar de João, toma banho, vai jantar e vai dormir.
-    B){humano.nome} vai cuidar do filho e do marido. Tomar banho, vai jantar e depois faz os trabalhos da faculdade e da escola onde ensina.
+
+
+            A){humano.nome} vai cuidar de João, toma banho e vai jantar e vai dormir.
+
+            B){humano.nome} vai cuidar do filho e do marido. Toma banho, vai jantar
+            e depois faz os trabalhos da faculdade e da escola onde ensina.
     ''')
     
     escolha = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
