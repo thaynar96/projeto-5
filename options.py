@@ -1,7 +1,7 @@
 from random import randint
 from pessoa import Pessoa, humano
 from time import sleep
-from tempo import Tempo
+from tempo import Tempo,tempo
 import os
 import sys
 
@@ -110,6 +110,8 @@ def option1():
             return f'\nPontos adquirido por {humano.name}:\nFamilia: {fam}/100\nRelacionamento do Casal: {rel_casal}/100\nTrabalho: {trab}/100\n Saúde: {saude}/100'
 def option2():
     clean_screen()
+    tempo.pass_time(30)
+    print(tempo)
     print_slow(f'{humano.name} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
     print(f'''
 
@@ -197,6 +199,8 @@ def option2():
 
 def option3():
     clean_screen()
+    tempo.pass_time(30)
+    print(tempo)
     print_slow(f'{humano.name} está no início do  percurso em direção ao seu trabalho, dentro do limite de velocidade permitido pela via, ela tem duas rotas para escolha: ')
     print(f'''
 
@@ -282,6 +286,8 @@ def option3():
 
 def option4():
     clean_screen()
+    tempo.pass_time(60*2)
+    print(tempo)
     print_slow(f'O chefe de {humano.name} pede que ela seja realocada de função durante 7 dias, para uma função de gestão de planejamentos de dados da escola. Caso humano aceite essa pequena mudança ela vai ter que levar trabalho para casa é fazer pela madrugada adentro, já que não dispõem de outro horário. ')
     print(f'''
 
@@ -372,6 +378,8 @@ def option4():
 
 def option5():
     clean_screen()
+    tempo.pass_time(60*3)
+    print(tempo)
     print_slow(f'{humano.name} está no seu horário de almoço e dispõe de 30 min para o almoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi buscar a criança.')
     print(f'''
 
@@ -458,6 +466,8 @@ def option5():
 
 def option6():
     clean_screen()
+    tempo.pass_time(60*7)
+    print(tempo)
     print_slow(
         f'Durante o trajeto para a faculdade, o gps informa de um grande engarrafamento mais afrente. {humano.name} tem um trabalho para apresentar em grupo:')
     print(f'''
@@ -630,6 +640,8 @@ def option7():
 
 def option8():
     clean_screen()
+    tempo.pass_time(60*4)
+    print(tempo)
     print_slow(
         f'Ao chegar em casa, {humano.name} descobre que Amando estava bêbado e não cuidou do filho. João estava sujo, com fome e chorando. ')
     print(f'''
@@ -718,7 +730,7 @@ def option8():
 
 def conclusao():
     clean_screen()
-    if humano.saude >= 90:
+    if humano.health >= 90:
         print(f'\nParabéns,a {humano.name} conseguiu alcançar seus obejtivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das reponsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
     else:
         print(f'Infelizmente, a {humano.name} não conseguiu alcançar seus objetivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das responsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
