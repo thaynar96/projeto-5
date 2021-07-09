@@ -1,5 +1,6 @@
 from tempo import Tempo
 from random import randint
+from time import sleep
 tempo = Tempo()
 
 
@@ -15,6 +16,10 @@ class Pessoa:
         self.__study = 0
         self.__security = 100
         self.__health = 100
+
+
+    scores = []
+    labels = ['Família', 'Relacionamento do Casal','Bem estar', 'Trabalho', 'Estudo', 'Segurança', 'Saúde']
 
     @property
     def name(self):
@@ -52,11 +57,11 @@ class Pessoa:
     def security(self):
         return self.__security
 
-    def acrescentarhealth(self):
-        pass
+    # def acrescentarhealth(self):
+    #     pass
 
-    def retirarhealth(self):
-        pass
+    # def retirarhealth(self):
+    #     pass
 
     def __str__(self):
         return f'''\nPONTUAÇÃO:
@@ -68,17 +73,17 @@ class Pessoa:
             Segurança: {self.__security}
             Saúde: {self.__health}'''
 
-    def update_scores(self, fam, rel_casal, bem_est, trab, estd, segur, health):
-        param = [fam, rel_casal, bem_est, trab, estd, segur, health]
+    def update_scores(self,scores):
+        
         atrib = [self.__family, self.__couple_relationship, self.__well_being,
                 self.__work, self.__study, self.__security, self.__health]
         for i in range(0, 7):
-            if atrib[i] + param[i] >= 100:
+            if atrib[i] + scores[i] >= 100:
                 atrib[i] = 100
-            elif atrib[i] + atrib[i] <= 0:
+            elif atrib[i] + scores[i] <= 0:
                 atrib[i] = 0
             else:
-                atrib[i] += param[i]
+                atrib[i] += scores[i]
 
         self.__family = atrib[0]
         self.__couple_relationship = atrib[1]
@@ -89,7 +94,7 @@ class Pessoa:
         self.__health = atrib[6]
 
 
-humano = Pessoa('Maria', 42)
+# humano = Pessoa('Maria', 42)
 
 # if escolha == 1:
 #     Maria.trabalhar()
