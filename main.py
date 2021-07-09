@@ -4,8 +4,7 @@ from time import sleep
 from options import *
 
 
-
-# alteração do comentário
+# alteração 
 human = Pessoa('Maria',42)
 
 while True:
