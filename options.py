@@ -1,6 +1,5 @@
 from random import randint
 from pessoa import Pessoa
-from rich import print
 from time import sleep
 from tempo import Tempo,tempo
 import os
