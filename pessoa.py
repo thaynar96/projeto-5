@@ -4,74 +4,74 @@ tempo = Tempo()
 
 
 class Pessoa:
-    def __init__(self, nome, idade):
-        self.__nome = nome.title()
-        self.__idade = idade
+    def __init__(self, name, age):
+        self.__name = name.title()
+        self.__age = age
 
-        self.__familya = 0
-        self.__relacionamento_casal = 50
-        self.__bemEstar = 50
-        self.__trabalho = 100
-        self.__estudo = 0
-        self.__seguranca = 100
-        self.__saude = 100
-
-    @property
-    def nome(self):
-        return self.__nome
+        self.__family = 0
+        self.__couple_relationship = 50
+        self.__well_being = 50
+        self.__work = 100
+        self.__study = 0
+        self.__security = 100
+        self.__health = 100
 
     @property
-    def idade(self):
-        return self.__idade
+    def name(self):
+        return self.__name
+
+    @property
+    def age(self):
+        return self.__age
     
     @property
-    def saude(self):
-        return self.__saude
+    def health(self):
+        return self.__health
     
     @property
     def familya(self):
-        return self.__familya
+        return self.__family
 
     @property
-    def relacionamento_casal(self):
-        return self.__relacionamento_casal
+    def couple_relationship(self):
+        return self.__couple_relationship
 
     @property
-    def bemEstar(self):
-        return self.__bemEstar
+    def well_being(self):
+        return self.__well_being
 
     @property
-    def trabalho(self):
-        return self.__trabalho
+    def work(self):
+        return self.__work
 
     @property
-    def estudo(self):
-        return self.__estudo
+    def study(self):
+        return self.__study
 
     @property
-    def seguranca(self):
-        return self.__seguranca
+    def security(self):
+        return self.__security
 
-    def acrescentarSaude(self):
+    def acrescentarhealth(self):
         pass
 
-    def retirarSaude(self):
+    def retirarhealth(self):
         pass
 
     def __str__(self):
         return f'''\nPONTUAÇÃO:
-            Família: {self.__familya}
-            Relacionamento do Casal: {self.__relacionamento_casal}
-            Bem Estar: {self.__bemEstar}
-            Trabalho: {self.__trabalho}
-            Estudo: {self.__estudo}
-            Segurança: {self.__seguranca}
-            Saúde: {self.__saude}'''
+            Família: {self.__family}
+            Relacionamento do Casal: {self.__couple_relationship}
+            Bem Estar: {self.__well_being}
+            work: {self.__work}
+            study: {self.__study}
+            Segurança: {self.__security}
+            Saúde: {self.__health}'''
 
-    def update_scores(self, fam, rel_casal, bem_est, trab, estd, segur, saude):
-        param = [fam, rel_casal, bem_est, trab, estd, segur, saude]
-        atrib = [self.__familya, self.__relacionamento_casal, self.__bemEstar,
-                self.__trabalho, self.__estudo, self.__seguranca, self.__saude]
+    def update_scores(self, fam, rel_casal, bem_est, trab, estd, segur, health):
+        param = [fam, rel_casal, bem_est, trab, estd, segur, health]
+        atrib = [self.__family, self.__couple_relationship, self.__well_being,
+                self.__work, self.__study, self.__security, self.__health]
         for i in range(0, 7):
             if atrib[i] + param[i] >= 100:
                 atrib[i] = 100
@@ -80,13 +80,13 @@ class Pessoa:
             else:
                 atrib[i] += param[i]
 
-        self.__familya = atrib[0]
-        self.__relacionamento_casal = atrib[1]
-        self.__bemEstar = atrib[2]
-        self.__trabalho = atrib[3]
-        self.__estudo = atrib[4]
-        self.__seguranca = atrib[5]
-        self.__saude = atrib[6]
+        self.__family = atrib[0]
+        self.__couple_relationship = atrib[1]
+        self.__well_being = atrib[2]
+        self.__work = atrib[3]
+        self.__study = atrib[4]
+        self.__security = atrib[5]
+        self.__health = atrib[6]
 
 
 humano = Pessoa('Maria', 42)
