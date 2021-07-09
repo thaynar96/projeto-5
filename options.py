@@ -24,7 +24,7 @@ def clean_screen():
 def option1():
     clean_screen()
     print(Tempo())
-    print_slow(f'{humano.name} acorda cansada, não dormiu direito pois estava preocupada como iria honrar com as contas. João está chorando, com a fralda suja e {humano.name} está atrasada para ir ao trabalho.')
+    print_slow(f'{humano.name} acorda cansada, não dormiu direito pois estava preocupada\ncomo iria honrar com as contas. João está chorando, com a fralda suja e\n{humano.name} está atrasada para ir ao trabalho.')
     print(
     f'''
 
@@ -43,7 +43,7 @@ def option1():
     if answer == 'A':
         if random_choice == 1:
             print(
-                f'\n{humano.name} chega atrasada no seu trabalho e é advertida pelo seu superior.')
+                f'\n{humano.name} tem grandes chances de chegar atrasada no trabalho e poderá ser advertida pelo seu superior.')
 
             fam = 10
             rel_casal = 0
@@ -59,7 +59,7 @@ def option1():
             return f'\nPontos adquirido por {humano.name}:\nFamília: {fam} pontos\nTrabalho: {trab} pontos\n Saúde: {saude} pontos'
 
         elif random_choice == 2:
-            print(f'\n{humano.name} cuida do filho e toma banho, não chega atrasada no trabalho.Mas está com fome por que não merendou')
+            print(f'\n{humano.name} cuida do filho e toma banho,mas está com fome por que não merendou')
 
             fam = 10
             rel_casal = 10
@@ -77,7 +77,7 @@ def option1():
     elif answer == 'B':
         if random_choice == 1:
             print(
-                f'\nAmando cuida do filho e faz a merenda do casal. {humano.name} chega atempo no trabalho. ')
+                f'\nAmando cuida do filho e faz a merenda do casal. {humano.name} chega à tempo no trabalho. ')
 
             fam = 10
             rel_casal = 10
@@ -112,25 +112,25 @@ def option2():
     clean_screen()
     tempo.pass_time(30)
     print(tempo)
-    print_slow(f'{humano.name} ao tentar sair com o carro elétrico, que foi emprestado por seu irmão Fabio, nota que tem dois suspeitos na frente da casa.')
+    print_slow(f'{humano.name} ao tentar sair com o carro elétrico, que foi emprestado\npor seu irmão Fabio, nota dois suspeitos na frente da casa.')
     print(f'''
 
 
-            A){humano.name} ignora os dois homens é abre o portão
+            A){humano.name} ignora os dois homens e abre o portão
             da garagem que não é automático.
 
             B){humano.name} chama Amando, que a orienta a chamar a policia
-            e aguardar até que os dois homens saião da frente da garagem..         
+            e aguardar até que os dois homens saiam da frente da garagem.         
     ''')
     
     choice = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     answer = validation(choice)
-    random_choice = randint(1, 2)
+    random_choice = 2
     
     if answer == 'A':
         if random_choice == 1:
             print(
-                f'\n{humano.name} foi muito imprudente, colocou sua vida em risco é da sua família .')
+                f'\n{humano.name} foi muito imprudente, colocou sua vida e da sua família em risco.')
 
             fam = 0
             rel_casal = 0
@@ -147,8 +147,8 @@ def option2():
 
         elif random_choice == 2:
             print(
-                f'\nOs dois sujeitos estavam hospedados na casa de frente, não ofereceram perigo, os dois homens esqueceram a chave dentro de casa e o celular. {humano.name} ligou para um chaveiro 24h para ajudar os dois rapazes e em seguida foi para o trabalho. ')
-
+                f'\nOs dois homens estavam hospedados na casa da frente, não ofereceram perigo. Eles esqueceram a chave e o celular dentro de casa . {humano.name} ligou para um chaveiro 24h para ajudar os dois rapazes e em seguida foi para o trabalho. ')
+            tempo.pass_time(20)
             fam = 0
             rel_casal = 10
             bem_est = 0
@@ -164,8 +164,8 @@ def option2():
 
     elif answer == 'B':
         if random_choice == 1:
-            print(f'\n{humano.name} segue o conselho do Amando, chama a policia e espera até que os dois homens saiam da frente da garagem.')
-
+            print(f'\n{humano.name} segue o conselho do Amando, chama a polícia e espera até que os dois homens saiam da frente da garagem.')
+            tempo.pass_time(20)
             fam = 0
             rel_casal = 10
             bem_est = 5
@@ -180,8 +180,8 @@ def option2():
             return f'\nPontos adquirido por {humano.name}:\nRelacionamento do Casal: {rel_casal}/100\nBem estar: {bem_est}/100\nTrabalho: {trab}/100\nSegurança: {segur}/100\n Saúde: {saude}/100'
 
         elif random_choice == 2:
-            print(f'\n{humano.name} briga com amando, diz que ele é muito medroso, mas espera que os dois homens vão embora, aciona a polícia. ')
-
+            print(f'\n{humano.name} briga com Amando, diz que ele é muito medroso, mas espera os dois homens irem embora e aciona a polícia. ')
+            tempo.pass_time(15)
             fam = 0
             rel_casal = -10
             bem_est = 0
@@ -201,7 +201,7 @@ def option3():
     clean_screen()
     tempo.pass_time(30)
     print(tempo)
-    print_slow(f'{humano.name} está no início do  percurso em direção ao seu trabalho, dentro do limite de velocidade permitido pela via, ela tem duas rotas para escolha: ')
+    print_slow(f'{humano.name} está no início do  percurso em direção ao seu trabalho,\ndentro do limite de velocidade permitido pela via. Ela tem duas rotas para escolha: ')
     print(f'''
 
 
@@ -216,7 +216,7 @@ def option3():
     
     if answer == 'A':
         if random_choice == 1:
-            print(f'\na.	No caminho mais rápido uma pessoa entra na frente do carro, mas ela não foi atropelada, não teve danos materiais, só o susto.')
+            print(f'\nNo caminho mais rápido uma pessoa entra na frente do carro, mas ela não foi atropelada, não teve danos materiais, só o susto.')
 
             fam = 0
             rel_casal = 0
@@ -234,7 +234,7 @@ def option3():
         elif random_choice == 2:
             print(
                 f'\nNo caminho mais rápido uma pessoa entra na frente do carro. Ao jogar o carro para a calçada {humano.name} bateu no meio fio e furou o pneu se atrasou. ')
-
+            tempo.pass_time(30)
             fam = 0
             rel_casal = 0
             bem_est = -5
@@ -288,7 +288,7 @@ def option4():
     clean_screen()
     tempo.pass_time(60*2)
     print(tempo)
-    print_slow(f'O chefe de {humano.name} pede que ela seja realocada de função durante 7 dias, para uma função de gestão de planejamentos de dados da escola. Caso humano aceite essa pequena mudança ela vai ter que levar trabalho para casa é fazer pela madrugada adentro, já que não dispõem de outro horário. ')
+    print_slow(f'O chefe de {humano.name} pede que ela seja realocada de função durante 7\ndias, para uma função de gestão de planejamentos de dados da escola. Caso {humano.name}\naceite essa pequena mudança ela terá que levar trabalho para casa e fazer pela\nmadrugada adentro, já que não dispõe de outro horário. ')
     print(f'''
 
 
@@ -298,7 +298,7 @@ def option4():
             B){humano.name} recusa educadamente o pedido do chefe já que não tem tempo
             disponível. Mas fica triste em dar a recusa, pois o seu superior é muito
             compreensível com ela, até autorizou a sua saída uma hora mais cedo, 
-            para que ela chegue atempo na faculdade.        
+            para que ela chegue a tempo na faculdade.        
     ''')
     
     choice = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
@@ -380,7 +380,7 @@ def option5():
     clean_screen()
     tempo.pass_time(60*3)
     print(tempo)
-    print_slow(f'{humano.name} está no seu horário de almoço e dispõe de 30 min para o almoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi buscar a criança.')
+    print_slow(f'{humano.name} está no seu horário de almoço e dispõe de 30 min para o\nalmoçar. Quando recebe uma ligação da escola do seu filho dizendo que o Amando não foi\nbuscar a criança.')
     print(f'''
 
 
@@ -469,7 +469,7 @@ def option6():
     tempo.pass_time(60*7)
     print(tempo)
     print_slow(
-        f'Durante o trajeto para a faculdade, o gps informa de um grande engarrafamento mais afrente. {humano.name} tem um trabalho para apresentar em grupo:')
+        f'Durante o trajeto para a faculdade, o gps informa de um grande engarrafamento mais\nà frente. {humano.name} tem um trabalho para apresentar em grupo:')
     print(f'''
 
 
@@ -555,7 +555,7 @@ def option6():
 def option7():
     clean_screen()
     print_slow(
-        f'Ao ir em direção a vaga de estacionamento, {humano.name} aguarda o carro sair da vaga para poder estacionar, quando de repente um motorista entra de uma vez e pega a vaga. ')
+        f'Ao ir em direção a vaga de estacionamento, {humano.name} aguarda o carro sair da\n vaga para poder estacionar, quando de repente um motorista\nentra de uma vez e pega a vaga. ')
     print(f'''
 
 
@@ -571,7 +571,7 @@ def option7():
     
     if answer == 'A':
         if random_choice == 1:
-            print(f'\nEncontra uma vaga e consegue chegar atempo na faculdade ')
+            print(f'\nEncontra uma vaga e consegue chegar à tempo na faculdade ')
 
             fam = 0
             rel_casal = 0
@@ -588,7 +588,7 @@ def option7():
 
         elif random_choice == 2:
             print(f'\nChega atrasada na classe de aula')
-
+            tempo.pass_time(15)
             fam = 0
             rel_casal = 0
             bem_est = -5
@@ -605,7 +605,7 @@ def option7():
     elif answer == 'B':
         if random_choice == 1:
             print(
-                f'\nO motorista que furou a frente da {humano.name} pede desculpas e tira o carro da vaga. {humano.name} chega no horário na sala de aula.')
+                f'\nO motorista que furou a frente da {humano.name} pede desculpas e tira o\ncarro da vaga. {humano.name} chega no horário na sala de aula.')
 
             fam = 0
             rel_casal = 0
@@ -621,7 +621,7 @@ def option7():
             return f'\nPontos adquirido por {humano.name}:\nBem estar: {bem_est}/100\nEstudo: {estd}/100\n Saúde: {saude}/100'
 
         elif random_choice == 2:
-            print(f'\nO motorista não tira o carro da vaga, {humano.name} xinga o motorista é chega atrasada na sala de aula.  ')
+            print(f'\nO motorista não tira o carro da vaga, {humano.name} xinga o motorista\né chega atrasada na sala de aula.  ')
 
             fam = 0
             rel_casal = 0
@@ -731,6 +731,6 @@ def option8():
 def conclusao():
     clean_screen()
     if humano.health >= 90:
-        print(f'\nParabéns,a {humano.name} conseguiu alcançar seus obejtivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das reponsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
+        print_slow(f'\nParabéns,a {humano.name} conseguiu alcançar seus obejtivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das reponsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
     else:
-        print(f'Infelizmente, a {humano.name} não conseguiu alcançar seus objetivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das responsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
+        print_slow(f'Infelizmente, a {humano.name} não conseguiu alcançar seus objetivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das responsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
