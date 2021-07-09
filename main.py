@@ -1,7 +1,7 @@
 from pessoa import Pessoa, humano
 from tempo import Tempo
 from time import sleep
-from opcaos import *
+from options import *
 
 
 # alteração do comentário
@@ -18,21 +18,21 @@ while True:
         # abaixo temos algumas funções que foram importadas de um módulo e possuem
         # condições para adicionar ou não certos atributos.
             
-    print(opcao1())# oi mundo
+    print(option1())
     sleep(4)
-    print(opcao2())
+    print(option2())
     sleep(4)
-    print(opcao3())
+    print(option3())
     sleep(4)
-    print(opcao4())
+    print(option4())
     sleep(4)
-    print(opcao5())
+    print(option5())
     sleep(4)
-    print(opcao6())
+    print(option6())
     sleep(4)
-    print(opcao7())
+    print(option7())
     sleep(4)
-    print(opcao8())
+    print(option8())
     sleep(4)
     terminar = input('Você quer tentar mais uma vez? (S/N)').upper()[0]
     while terminar not in 'SN':

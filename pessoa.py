@@ -52,12 +52,6 @@ class Pessoa:
     def seguranca(self):
         return self.__seguranca
 
-    def acrescentarSaude(self):
-        pass
-
-    def retirarSaude(self):
-        pass
-
     def __str__(self):
         return f'''\nPONTUAÇÃO:
             Família: {self.__familya}
