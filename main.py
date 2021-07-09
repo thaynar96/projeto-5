@@ -1,5 +1,5 @@
 from pessoa import Pessoa # importando a classe pessoa
-from tempo import Tempo 
+from tempo import Tempo
 from time import sleep
 from options import *
 
@@ -32,7 +32,6 @@ while True:
     sleep(4)
     option8(human)
     sleep(4)
-    print(human)
     conclusao(human)
     end = input('\nVocê quer tentar mais uma vez? (S/N)').upper()[0]
     while end not in 'SN':#validação do que foi escrito
