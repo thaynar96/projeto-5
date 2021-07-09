@@ -17,6 +17,16 @@ class Pessoa:
         self.__security = 100
         self.__health = 100
 
+#método string com pontuação total do jogo
+    def __str__(self):
+        return f'''\nA PONTUAÇÃO FINAL FOI:
+            Família: {self.__family}
+            Relacionamento do Casal: {self.__couple_relationship}
+            Bem Estar: {self.__well_being}
+            work: {self.__work}
+            study: {self.__study}
+            Segurança: {self.__security}
+            Saúde: {self.__health}'''
 
     scores = []
     labels = ['Família', 'Relacionamento do Casal','Bem estar', 'Trabalho', 'Estudo', 'Segurança', 'Saúde']
@@ -57,22 +67,7 @@ class Pessoa:
     def security(self):
         return self.__security
 
-    # def acrescentarhealth(self):
-    #     pass
-
-    # def retirarhealth(self):
-    #     pass
-
-    def __str__(self):
-        return f'''\nPONTUAÇÃO:
-            Família: {self.__family}
-            Relacionamento do Casal: {self.__couple_relationship}
-            Bem Estar: {self.__well_being}
-            work: {self.__work}
-            study: {self.__study}
-            Segurança: {self.__security}
-            Saúde: {self.__health}'''
-
+#função que atualiza os valores dos atributos
     def update_scores(self,scores):
         
         atrib = [self.__family, self.__couple_relationship, self.__well_being,
@@ -92,27 +87,3 @@ class Pessoa:
         self.__study = atrib[4]
         self.__security = atrib[5]
         self.__health = atrib[6]
-
-
-# humano = Pessoa('Maria', 42)
-
-# if escolha == 1:
-#     Maria.trabalhar()
-#     tempo.passarTempo(60*8)
-# elif escolha == 2:
-#     Maria.tomarBanho()
-#     tempo.passarTempo(20)
-# elif escolha == 3:
-
-#     tempo.passarTempo(20)
-# elif escolha == 4:
-#     Maria.cuidarFilho()
-#     tempo.passarTempo(20)
-# elif escolha == 5:
-#     Maria.trabalhar()
-#     tempo.passarTempo(20)
-# elif escolha == 6:
-#     Maria.dormir()
-#     tempo.passarTempo(20)
-
-#     print(tempo.hora)

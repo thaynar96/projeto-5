@@ -1,26 +1,30 @@
 from random import randint
 from pessoa import Pessoa
+from rich import print
 from time import sleep
 from tempo import Tempo,tempo
 import os
 import sys
 
-
+#função para validar a entrada da resposta de cada interação
 def validation(a):
     while a not in 'AB':
         a = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     return a
-
+#função para escrever textos letra a letra
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         sleep(0.044)
-
+#função para limpar o terminar a cada interação
 def clean_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-
-
+#função para zerar o horário
+def clean_time():
+    tempo.hour = 5
+    tempo.minute =0
+#função que mostra quanto foi adicionado a cada atributo depois da interação
 def show_scores(scores, labels):
     print()
     print('\033[1;93mPONTOS\033[m:')
@@ -29,7 +33,7 @@ def show_scores(scores, labels):
             print(f'\033[96m{labels[i]}\033[m:  \033[93m{scores[i]}\033[m \033[96mpontos\033[m')
     print()
 
-
+#função com a primeira parte da história e que recebe o objeto como parametro.
 def option1(human):
     clean_screen()
     print(Tempo())
@@ -99,7 +103,6 @@ def option1(human):
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             human.update_scores(human.scores)            
             show_scores(human.scores, human.labels)
-           
 
         elif random_choice == 2:
             print(
@@ -168,9 +171,7 @@ def option2(human):
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             human.update_scores(human.scores)            
             show_scores(human.scores, human.labels)
-          
 
-           
     elif answer == 'B':
         if random_choice == 1:
             print(f'\n{human.name} segue o conselho do Amando, chama a polícia e espera até que os dois homens saiam da frente da garagem.')
@@ -240,8 +241,6 @@ def option3(human):
             show_scores(human.scores, human.labels)
             
 
-           
-
         elif random_choice == 2:
             print(
                 f'\nNo caminho mais rápido uma pessoa entra na frente do carro. Ao jogar o carro para a calçada {human.name} bateu no meio fio e furou o pneu se atrasou. ')
@@ -257,7 +256,6 @@ def option3(human):
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             human.update_scores(human.scores)            
             show_scores(human.scores, human.labels)
-           
     elif answer == 'B':
         if random_choice == 1:
             print(f'\nO trânsito esta normal, ela chega no trabalho cedo.')
@@ -273,7 +271,6 @@ def option3(human):
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             human.update_scores(human.scores)            
             show_scores(human.scores, human.labels)
-           
         elif random_choice == 2:
             print(
                 f'\n{human.name} pega um engarrafamento devido um acidente e chega atrasada no trabalho.')
@@ -503,7 +500,6 @@ def option6(human):
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             human.update_scores(human.scores)            
             show_scores(human.scores, human.labels)
-           
             
         elif random_choice == 2:
             print(
@@ -733,6 +729,6 @@ def option8(human):
 def conclusao(human):
     clean_screen()
     if human.health >= 90:
-        print_slow(f'\nParabéns,a {human.name} conseguiu alcançar seus obejtivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das reponsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
+        print_slow(f'\nParabéns,a {human.name} conseguiu alcançar seus objetivos!\n\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada,as\nmulheres trabalham cerca de 7,5 horas a mais do que os homens.O percentual de\ndomicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45%\n em 2018. 43% das mulheres que são chefes de domicílio no Brasil vive em casal\n – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das\nreponsáveis pelo lar se dividem entre mulheres solteiras com filho (32%),\nmulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
     else:
-        print_slow(f'Infelizmente, a {human.name} não conseguiu alcançar seus objetivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as mulheres trabalham cerca de 7,5 horas a mais do que os homens.\nO percentual de domicílios brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que 30% têm filhos e 13% não. Já o restante das 34,4 milhões das responsáveis pelo lar se dividem entre mulheres solteiras com filho (32%), mulheres que vivem sozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
+        print_slow(f'Infelizmente, a {human.name} não conseguiu alcançar seus objetivos.\n\n\nDe acordo com o estudo feito pelo Instituto de Pesquisa Econômica Aplicada, as\nmulheres trabalham cerca de 7,5 horas a mais do que os homens.O percentual de domicílios\n brasileiros comandados por mulheres saltou de 25%, em 1995, para 45% em 2018.\n43% das mulheres que são chefes de domicílio no Brasil vive em casal – sendo que\n30% têm filhos e 13% não. Já o restante das 34,4 milhões das responsáveis pelo lar \nse dividem entre mulheres solteiras com filho (32%), mulheres que vivem \nsozinhas (18%) e mulheres que dividem a casa com amigos ou parentes (7%).')
