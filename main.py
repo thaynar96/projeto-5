@@ -1,3 +1,5 @@
+# Software de ficção interativa que relata a rotina de uma típica mulher brasileira. Procuramos seguir as estruturas propostas e os métodos de boa prática, evitando o máximo de prints fora da 
+# # main.
 from pessoa import Pessoa # importando a classe pessoa
 from tempo import Tempo 
 from time import sleep
@@ -33,6 +35,7 @@ while True:
     sleep(4)
     print(human)
     conclusao(human)
+    
     end = input('\nVocê quer tentar mais uma vez? (S/N)').upper()[0]
     while end not in 'SN':#validação do que foi escrito
         end = input('Você quer tentar mais uma vez? (S/N)').upper()[0]

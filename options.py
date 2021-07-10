@@ -56,7 +56,7 @@ def option1(human):
         if random_choice == 1:
             print(
                 f'\n{human.name} tem grandes chances de chegar atrasada no trabalho e poderá ser advertida pelo seu superior.')
-
+            # Variáveis auxiliares que guardam os valores das pontuações por rodada.
             fam = 10
             couple_relat = 0
             welfare = 0
@@ -64,9 +64,11 @@ def option1(human):
             std = 0
             saft = 0
             health = 10
-
+             # As variáveis são recebidas na lista scores
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            # São passada como parâmetro para o médodo update_scores da Classe Pessoa para incrementear a pontuação geral
+            human.update_scores(human.scores)
+            # A lista scores, com as varipaveis auxiliares e a lista labels da classe Pessoa são passadas por parâmetro para o método show_scores mostrar a pontuação da rodada           
             show_scores(human.scores, human.labels)
             
         elif random_choice == 2:
@@ -79,9 +81,11 @@ def option1(human):
             std = 0
             saft = 0
             health = 20
-
+             # As variáveis são recebidas na lista scores
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            # São passada como parâmetro para o médodo update_scores da Classe Pessoa para incrementear a pontuação geral
+            human.update_scores(human.scores)
+            # A lista scores, com as varipaveis auxiliares e a lista labels da classe Pessoa são passadas por parâmetro para o método show_scores mostrar a pontuação da rodada            
             show_scores(human.scores, human.labels)
             
 
