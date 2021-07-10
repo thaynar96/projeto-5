@@ -1,44 +1,55 @@
 from random import randint
 from pessoa import Pessoa
 from time import sleep
-from tempo import Tempo,tempo
+from tempo import Tempo, tempo
 import os
 import sys
 
-#função para validar a entrada da resposta de cada interação
+
+# função para validar a entrada da resposta de cada interação
 def validation(a):
     while a not in 'AB':
         a = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     return a
-#função para escrever textos letra a letra
+
+
+# função para escrever textos letra a letra
 def print_slow(str):
     for letter in str:
         sys.stdout.write(letter)
         sys.stdout.flush()
         sleep(0.044)
-#função para limpar o terminar a cada interação
+
+
+# função para limpar o terminar a cada interação
 def clean_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
-#função para zerar o horário
+# função para zerar o horário
+
+
 def clean_time():
     tempo.hour = 5
-    tempo.minute =0
-#função que mostra quanto foi adicionado a cada atributo depois da interação
+    tempo.minute = 0
+
+
+# função que mostra quanto foi adicionado a cada atributo depois da interação
 def show_scores(scores, labels):
     print()
     print('\033[1;93mPONTOS\033[m:')
-    for i in range(0,7):
+    for i in range(0, 7):
         if scores[i] != 0:
-            print(f'\033[96m{labels[i]}\033[m:  \033[93m{scores[i]}\033[m \033[96mpontos\033[m')
+            print(
+                f'\033[96m{labels[i]}\033[m:  \033[93m{scores[i]}\033[m \033[96mpontos\033[m')
     print()
 
-#função com a primeira parte da história e que recebe o objeto como parametro.
+
+# função com a primeira parte da história e que recebe o objeto como parametro.
 def option1(human):
     clean_screen()
     print(Tempo())
     print_slow(f'{human.name} acorda cansada, não dormiu direito pois estava preocupada\ncomo iria honrar com as contas. João está chorando, com a fralda suja e\n{human.name} está atrasada para ir ao trabalho.')
     print(
-    f'''
+        f'''
 
 
             A){human.name} vai cuidar do filho, toma um banho rápido
@@ -46,12 +57,12 @@ def option1(human):
 
             B)Acorda Amando e pede que ele vá cuidar do filho e preparar
             a merenda do casal enquanto {human.name} vai tomar banho.        
-    '''   )
-    
+    ''')
+
     choice = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(
@@ -64,15 +75,16 @@ def option1(human):
             std = 0
             saft = 0
             health = 10
-             # As variáveis são recebidas na lista scores
+            # As variáveis são recebidas na lista scores
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             # São passada como parâmetro para o médodo update_scores da Classe Pessoa para incrementear a pontuação geral
             human.update_scores(human.scores)
-            # A lista scores, com as varipaveis auxiliares e a lista labels da classe Pessoa são passadas por parâmetro para o método show_scores mostrar a pontuação da rodada           
+            # A lista scores, com as varipaveis auxiliares e a lista labels da classe Pessoa são passadas por parâmetro para o método show_scores mostrar a pontuação da rodada
             show_scores(human.scores, human.labels)
-            
+
         elif random_choice == 2:
-            print(f'\n{human.name} cuida do filho e toma banho,mas está com fome por que não merendou')
+            print(
+                f'\n{human.name} cuida do filho e toma banho,mas está com fome por que não merendou')
 
             fam = 10
             couple_relat = 10
@@ -81,15 +93,13 @@ def option1(human):
             std = 0
             saft = 0
             health = 20
-             # As variáveis são recebidas na lista scores
+            # As variáveis são recebidas na lista scores
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
             # São passada como parâmetro para o médodo update_scores da Classe Pessoa para incrementear a pontuação geral
             human.update_scores(human.scores)
-            # A lista scores, com as varipaveis auxiliares e a lista labels da classe Pessoa são passadas por parâmetro para o método show_scores mostrar a pontuação da rodada            
+            # A lista scores, com as varipaveis auxiliares e a lista labels da classe Pessoa são passadas por parâmetro para o método show_scores mostrar a pontuação da rodada
             show_scores(human.scores, human.labels)
-            
 
-            
     elif answer == 'B':
         if random_choice == 1:
             print(
@@ -104,7 +114,7 @@ def option1(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
 
         elif random_choice == 2:
@@ -118,11 +128,12 @@ def option1(human):
             std = 0
             saft = 0
             health = -10
-    
+
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
+
+
 def option2(human):
     clean_screen()
     tempo.pass_time(30)
@@ -137,11 +148,11 @@ def option2(human):
             B){human.name} chama Amando, que a orienta a chamar a policia
             e aguardar até que os dois homens saiam da frente da garagem.         
     ''')
-    
+
     choice = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = 2
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(
@@ -156,9 +167,9 @@ def option2(human):
             health = 0
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
+
         elif random_choice == 2:
             print(
                 f'\nOs dois homens estavam hospedados na casa da frente, não ofereceram perigo. Eles esqueceram a chave e o celular dentro de casa . {human.name} ligou para um chaveiro 24h para ajudar os dois rapazes e em seguida foi para o trabalho. ')
@@ -172,7 +183,7 @@ def option2(human):
             health = 0
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
 
     elif answer == 'B':
@@ -188,9 +199,9 @@ def option2(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
+
         elif random_choice == 2:
             print(f'\n{human.name} briga com Amando, diz que ele é muito medroso, mas espera os dois homens irem embora e aciona a polícia. ')
             tempo.pass_time(15)
@@ -203,12 +214,9 @@ def option2(human):
             health = 5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
-            
 
-    #sleep(4)
 
 def option3(human):
     clean_screen()
@@ -222,11 +230,11 @@ def option3(human):
 
             B){human.name} pega a rota normal.      
     ''')
-    
+
     choice = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(f'\nNo caminho mais rápido uma pessoa entra na frente do carro, mas ela não foi atropelada, não teve danos materiais, só o susto.')
@@ -240,9 +248,8 @@ def option3(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
             print(
@@ -257,7 +264,7 @@ def option3(human):
             health = -10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
     elif answer == 'B':
         if random_choice == 1:
@@ -272,7 +279,7 @@ def option3(human):
             health = 5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
         elif random_choice == 2:
             print(
@@ -287,10 +294,9 @@ def option3(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
-    #sleep(4)
+
 
 def option4(human):
     clean_screen()
@@ -308,11 +314,11 @@ def option4(human):
             compreensível com ela, até autorizou a sua saída uma hora mais cedo, 
             para que ela chegue a tempo na faculdade.        
     ''')
-    
+
     choice = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(f'\nDevido ao esforço de {human.name} ela é promovida a um cargo temporário de confiança que lhe permite ganhar mais, ela fica mais contente por dar mais conforto para sua família através do aumento que vai ter.')
@@ -326,9 +332,8 @@ def option4(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
             print(f'\n{human.name} fica muito estressada e sobrecarregada com a quantidade de trabalho e o tempo disponível que tem. Acaba não dando atenção ao João e desconta seu estresse em Amando.')
@@ -342,9 +347,8 @@ def option4(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
     elif answer == 'B':
         if random_choice == 1:
@@ -359,9 +363,8 @@ def option4(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
             print(
@@ -376,10 +379,8 @@ def option4(human):
             health = 5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
-    #sleep(4)
 
 
 def option5(human):
@@ -395,11 +396,11 @@ def option5(human):
 
             B)Tenta ligar para o Armando e saber o que houve.        
             ''')
-    
+
     choice = input('Digite uma opção do menu [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(
@@ -414,9 +415,8 @@ def option5(human):
             health = 0
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
             print(
@@ -431,9 +431,8 @@ def option5(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
     elif answer == 'B':
         if random_choice == 1:
@@ -448,12 +447,12 @@ def option5(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
-            print(f'\nDescobre que Amando não foi pegar o filho por que estava em um bar. ')
+            print(
+                f'\nDescobre que Amando não foi pegar o filho por que estava em um bar. ')
 
             fam = -10
             couple_relat = -10
@@ -464,10 +463,9 @@ def option5(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
-    #sleep(4)
+
 
 def option6(human):
     clean_screen()
@@ -482,11 +480,11 @@ def option6(human):
 
             B)Fica na mesma via, supondo que o engarrafamento já terminou.        
     ''')
-    
+
     choice = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(
@@ -501,9 +499,9 @@ def option6(human):
             health = 5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
+
         elif random_choice == 2:
             print(
                 f'\nDurante o desvio houve engarrafamento e {human.name} chegou atrasada na faculdade.')
@@ -517,9 +515,8 @@ def option6(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
     elif answer == 'B':
         if random_choice == 1:
@@ -534,9 +531,8 @@ def option6(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
             print(f'\n{human.name} ficou presa no engarrafamento, ficou estressada, chegou atrasada na faculdade, e levou uma advertência do professor. ')
@@ -550,10 +546,9 @@ def option6(human):
             health = -10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
 
-    #sleep(4)
 
 def option7(human):
     clean_screen()
@@ -567,11 +562,11 @@ def option7(human):
             B)Tenta dialogar com o motorista para que ele dê a vaga para ela,
             já que ela estava esperando o motorista da vaga sair para ela poder entrar
     ''')
-    
+
     choice = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(f'\nEncontra uma vaga e consegue chegar à tempo na faculdade ')
@@ -585,9 +580,8 @@ def option7(human):
             health = 5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
             print(f'\nChega atrasada na classe de aula')
@@ -601,9 +595,9 @@ def option7(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
+
     elif answer == 'B':
         if random_choice == 1:
             print(
@@ -618,12 +612,12 @@ def option7(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
         elif random_choice == 2:
-            print(f'\nO motorista não tira o carro da vaga, {human.name} xinga o motorista\né chega atrasada na sala de aula.  ')
+            print(
+                f'\nO motorista não tira o carro da vaga, {human.name} xinga o motorista\né chega atrasada na sala de aula.  ')
 
             fam = 0
             couple_relat = 0
@@ -634,11 +628,9 @@ def option7(human):
             health = -5
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
-    #sleep(4)
 
 def option8(human):
     clean_screen()
@@ -654,11 +646,11 @@ def option8(human):
             B){human.name} vai cuidar do filho e do marido. Toma banho, vai jantar
             e depois faz os trabalhos da faculdade e da escola onde ensina.
     ''')
-    
+
     choice = input('Digite uma opção do menu  [A / B]:  ')[0].upper()
     answer = validation(choice)
     random_choice = randint(1, 2)
-    
+
     if answer == 'A':
         if random_choice == 1:
             print(
@@ -673,13 +665,12 @@ def option8(human):
             health = 0
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
-
 
         elif random_choice == 2:
-            print(f'\n{human.name} cuida do filho e depois cai na cama de tanto cansaço. O sono foi mais forte que a fome e banho.')
+            print(
+                f'\n{human.name} cuida do filho e depois cai na cama de tanto cansaço. O sono foi mais forte que a fome e banho.')
 
             fam = 5
             couple_relat = -10
@@ -690,9 +681,8 @@ def option8(human):
             health = -10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
     elif answer == 'B':
         if random_choice == 1:
@@ -708,9 +698,9 @@ def option8(human):
             health = 20
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
+
         elif random_choice == 2:
             print(f'\n{human.name} está pensando em se divorciar, mas apesar dos problemas que ela tem com o marido, João é muito apegado com o pai, ela teme que o João fique muito triste com a separação dos pais. {human.name} vai dormir com uma forte dor de cabeça. ')
 
@@ -723,12 +713,11 @@ def option8(human):
             health = 10
 
             human.scores = [fam, couple_relat, welfare, wrk, std, saft, health]
-            human.update_scores(human.scores)            
+            human.update_scores(human.scores)
             show_scores(human.scores, human.labels)
-            
 
-    #sleep(4)
 
+# Método para a conclusão da históra.
 def conclusao(human):
     clean_screen()
     if human.health >= 90:

@@ -6,7 +6,7 @@ from time import sleep
 from options import *
 
 
-# alteração 
+# Importando a classe pessoa
 human = Pessoa('Maria',42)
 
 while True:
@@ -15,7 +15,7 @@ while True:
     #introdução
     print_slow(f'''\n{human.name} tem {human.age} anos, é casada com Amando de 45 anos.\nJoão é o primeiro filho do casal que tem 6 anos de idade.\n{human.name} trabalha em período integral 8:00 – 18:00 em uma escola que fica \nlocalizada a 2 horas da sua casa. Ela está no penúltimo semestre da faculdade.\nO casal não possui casa própria, moram de aluguel. Amando está desempregado.\nAjude {human.name} a conseguir seus objetivos:\n''')
     sleep(2)
-    # abaixo temos algumas funções que foram importadas de um módulo e possuem
+    # abaixo temos algumas funções que foram importadas do módulo e possuem
     # condições para adicionar ou não certos atributos da classe pessoa.
     option1(human)
     sleep(4)

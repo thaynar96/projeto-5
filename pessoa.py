@@ -17,7 +17,7 @@ class Pessoa:
         self.__security = 100
         self.__health = 100
 
-#método string com pontuação total do jogo
+# método string com pontuação total do jogo
     def __str__(self):
         return f'''\nA PONTUAÇÃO FINAL FOI:
             Família: {self.__family}
@@ -28,8 +28,10 @@ class Pessoa:
             Segurança: {self.__security}
             Saúde: {self.__health}'''
 
-    scores = []
-    labels = ['Família', 'Relacionamento do Casal','Bem estar', 'Trabalho', 'Estudo', 'Segurança', 'Saúde']
+    scores = []  # guarda os pontos para o método update_scores e o mét. show_scores
+    # Guarda os nomes chaves para cada tipo de ponto. Usada para feedback com o usuário no método show_scores
+    labels = ['Família', 'Relacionamento do Casal',
+              'Bem estar', 'Trabalho', 'Estudo', 'Segurança', 'Saúde']
 
     @property
     def name(self):
@@ -38,11 +40,11 @@ class Pessoa:
     @property
     def age(self):
         return self.__age
-    
+
     @property
     def health(self):
         return self.__health
-    
+
     @property
     def familya(self):
         return self.__family
@@ -67,11 +69,11 @@ class Pessoa:
     def security(self):
         return self.__security
 
-#função que atualiza os valores dos atributos
-    def update_scores(self,scores):
-        
+# Atualiza os pontos totais. Recebe a lista scores por parâmetro. E compara a q vem pelo parâmtro com uma lista dos atributos
+    def update_scores(self, scores):
+
         atrib = [self.__family, self.__couple_relationship, self.__well_being,
-                self.__work, self.__study, self.__security, self.__health]
+                 self.__work, self.__study, self.__security, self.__health]
         for i in range(0, 7):
             if atrib[i] + scores[i] >= 100:
                 atrib[i] = 100
